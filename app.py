@@ -30,7 +30,7 @@ def skills():
 def news():
 
     link = 'https://inshorts.com/en/read'
-    req = requests.get(link, timeout=(3.05, 27))
+    req = requests.get(link)
 
     soup = bs(req.content, 'html5lib')
     box = soup.findAll('div', attrs = {'class':'news-card z-depth-1'})
