@@ -1,12 +1,6 @@
-# [Portfolio](https://portfoliousingflask.herokuapp.com/contact)
+# [News Website](https://github.com/imvickykumar999/vicks-news/blob/main/templates/news.html)
 
-[![app.py](https://raw.githubusercontent.com/imvickykumar999/Portfolio-using-Flask/main/screenshot.png)](https://github.com/imvickykumar999/Portfolio-using-Flask/blob/main/app.py)
+[![app.py](https://github.com/imvickykumar999/vicks-news/blob/main/news.png?raw=true)](https://github.com/imvickykumar999/vicks-news/blob/680a0bd814eb3af809dffbb8957a4b4681217ffb/app.py#L29)
 
-## Download my WebApp's APK
+## Download my WebApp's APK for Android
 [![download webapp](https://raw.githubusercontent.com/imvickykumar999/Portfolio-using-Flask/main/chart.png)](https://appsgeyser.com/api/track/redirect?url=https://files.appsgeyser.com/Oye%20Vix_12473422.apk?src=page)
-
-
-Simple Portfolio using html css and Flask
-----------------------------
-
-[![Profile Photo](https://raw.githubusercontent.com/imvickykumar999/Portfolio-oye-vicks/master/image/profile.jpg)](https://imvickykumar999.github.io/Portfolio-oye-vicks/)
