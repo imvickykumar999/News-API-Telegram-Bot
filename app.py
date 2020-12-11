@@ -45,6 +45,7 @@ def news():
         # urllib.request.urlretrieve(img, f"static/news/_{i}.jpg")
 
         b = box[i].find('div', attrs = {'itemprop':'articleBody'}).text
+        l='link not available'
         try:
             l = box[i].find('a', attrs = {'class':'source'})['href']
         except:
