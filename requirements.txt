@@ -16,3 +16,4 @@ WTForms==2.1
 bs4
 requests
 lxml
+html5lib
