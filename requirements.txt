@@ -13,3 +13,5 @@ MarkupSafe==1.1.1
 SQLAlchemy==1.3.0
 Werkzeug==0.16.0
 WTForms==2.1
+bs4
+requests
