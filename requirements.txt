@@ -15,5 +15,4 @@ Werkzeug==0.16.0
 WTForms==2.1
 bs4
 requests
-lxml
-html5lib
+html5lib 1.0.1
