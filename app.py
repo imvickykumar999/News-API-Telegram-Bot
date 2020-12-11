@@ -1,4 +1,5 @@
 
+# from selenium import webdriver
 from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup as bs
@@ -30,14 +31,17 @@ def skills():
 def news():
 
     link = 'https://inshorts.com/en/read'
+    # browser = webdriver.PhantomJS()
+    # browser.get(link)
+    # req = browser.page_source
     req = requests.get(link)
 
     soup = bs(req.content, 'html5lib')
+    # soup = bs(req.content, "html.parser")
     box = soup.findAll('div', attrs = {'class':'news-card z-depth-1'})
 
     ha,ia,ba,la = [],[],[],[]
-    # for i in range(len(box)):
-    for i in range(6):
+    for i in range(len(box)):
         h = box[i].find('span', attrs = {'itemprop':'headline'}).text
 
         m = box[i].find('div', attrs = {'class':'news-card-image'})
@@ -45,7 +49,7 @@ def news():
         # urllib.request.urlretrieve(img, f"static/news/_{i}.jpg")
 
         b = box[i].find('div', attrs = {'itemprop':'articleBody'}).text
-        l='link not available'
+        l='link not found'
         try:
             l = box[i].find('a', attrs = {'class':'source'})['href']
         except:
@@ -55,7 +59,7 @@ def news():
         ia.append(m)
         ba.append(b)
         la.append(l)
-    return render_template('news.html', ha=ha, ia=ia, ba=ba, la=la)
+    return render_template('news.html', ha=ha, ia=ia, ba=ba, la=la, len = len(ha))
 
 @app.errorhandler(404)
 def page_not_found(e):
