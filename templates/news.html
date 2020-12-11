@@ -30,26 +30,23 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-
         <div class="row row-cols-1 row-cols-md-2">
 
-<!-- 1st card -->
-
-          {%for i in range(0, len)%}
+          {%for x in range(0, len)%}
 
               <div class="col mb-4">
                 <div class="card">
-                  <a href={{ia[i]}}>
+                  <a href={{ia[x]}}>
                     <!-- <img src="../static/news/_0.jpg" class="card-img-top" alt="0"> -->
-                    <img src={{ia[i]}} class="card-img-top">
+                    <img src={{ia[x]}} class="card-img-top">
                   </a>
                   <div class="card-body">
                     <center>
-                      <h5 class="card-title">{{ha[i]}}</h5>
+                      <h5 class="card-title">{{ha[x]}}</h5>
                       <br>
-                      <p class="card-text">{{ba[i]}}</p>
+                      <p class="card-text">{{ba[x]}}</p>
                       <br>
-                      <a href="{{la[i]}}" class="btn btn-primary">Read More</a>
+                      <a href="{{la[x]}}" class="btn btn-primary">Read More</a>
                     </center>
                   </div>
                 </div>
@@ -58,10 +55,9 @@
           {% endfor %}
 
         </div>
-        <!-- class="row row-cols-1 row-cols-md-2 -->
-
       </div>
     </div>
+
   </body>
 </html>
 
