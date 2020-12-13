@@ -30,7 +30,7 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-2">
+        <!-- <div class="row row-cols-1 row-cols-md-2"> -->
 
           {%for x in range(0, len)%}
 
@@ -42,9 +42,11 @@
                   </a>
                   <div class="card-body">
                     <center>
-                      <h5 class="card-title">{{ha[x]}}</h5>
+                      <h1 class="card-title">{{x+1}}). {{ha[x]}}</h1>
                       <br>
-                      <p class="card-text">{{ba[x]}}</p>
+                        <h3>
+                          <p class="card-text">{{ba[x]}}</p>
+                        </h3>
                       <br>
                       <a href="{{la[x]}}" class="btn btn-primary">Read More</a>
                     </center>
@@ -55,7 +57,7 @@
           {% endfor %}
 
         </div>
-      </div>
+      <!-- </div> -->
     </div>
 
   </body>
