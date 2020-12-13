@@ -27,6 +27,10 @@ def home():
 def skills():
     return render_template('skills.html')
 
+@app.route('/morse')
+def morse():
+    return render_template('morse.html')
+
 @app.route('/news')
 def news():
 
