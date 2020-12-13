@@ -1,5 +1,7 @@
 # [News Website](https://github.com/imvickykumar999/vicks-news/blob/main/templates/news.html)
 
+## Run `heroku logs -t -a vicksnews` in CMD to check errors in delpoyed site.
+
 [![app.py](https://github.com/imvickykumar999/vicks-news/blob/main/news.png?raw=true)](https://github.com/imvickykumar999/vicks-news/blob/680a0bd814eb3af809dffbb8957a4b4681217ffb/app.py#L29)
 
 ## Download my WebApp's APK for Android
