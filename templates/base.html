@@ -13,19 +13,20 @@
         .card-img-top {
           object-fit: cover;
           object-position: center;
-          height: 300px;
+          height: 650px;
           width: 540px;
         }
 
         body {
           font-family: Arial, Helvetica, sans-serif;
           font-size: 25px;
+          background-image: url("../static/screenshots/jumbo.jpg");
           padding: 30px;
           line-height: 1.6;
         }
 
         h1 {
-          text-align: center;
+          /* text-align: center; */
           margin-bottom: 30px;
           border-bottom: 1px #ccc solid;
         }
@@ -86,6 +87,10 @@
 
               <li class="nav-item">
                 <a class="nav-link" href="{{url_for('skills')}}"><strong>Skills</strong></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('morse')}}"><em>Morse</em></a>
               </li>
 
               <li class="nav-item">
