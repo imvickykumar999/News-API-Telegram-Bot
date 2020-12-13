@@ -48,7 +48,13 @@
                           <p class="card-text">{{ba[x]}}</p>
                         </h3>
                       <br>
-                      <a href="{{la[x]}}" class="btn btn-primary">Read More</a>
+
+                      {% if la[x] == 'link not found' %}
+                          <a href="{{la[x]}}" class="btn btn-primary">Link NOT Found</a>
+                      {% else %}
+                          <a href="{{la[x]}}" class="btn btn-primary">Read More</a>
+                      {% endif %}
+
                     </center>
                   </div>
                 </div>
@@ -64,4 +70,3 @@
 </html>
 
 {% endblock %}
-
