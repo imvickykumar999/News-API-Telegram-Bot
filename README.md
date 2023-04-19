@@ -1,5 +1,11 @@
 # [News Website](https://github.com/imvickykumar999/vicks-news/blob/main/templates/news.html)
 
+>------------
+>
+>### [Console Upload](https://www.pythonanywhere.com/user/imvickykumar999/consoles/bash//home/imvickykumar999/mysite/new) : `unzip /home/imvickykumar999/mysite/app.zip`
+>
+>---------------
+
 ## Run `heroku logs -t -a vicksnews` in CMD to check errors in [deployed site](https://imvickykumar999.pythonanywhere.com/).
 
 [![app.py](https://github.com/imvickykumar999/vicks-news/blob/main/news.png?raw=true)](https://github.com/imvickykumar999/vicks-news/blob/680a0bd814eb3af809dffbb8957a4b4681217ffb/app.py#L29)
