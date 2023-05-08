@@ -17,8 +17,7 @@
 
         <div class="alert alert-warning" role="alert">
           <center>
-            <!-- <a href="https://inshorts.com/en/read"> -->
-            <a href="https://github.com/imvickykumar999/vicks-news/blob/main/templates/news.html">
+            <a target="_blank" href="https://github.com/imvickykumar999/vicks-news/blob/main/templates/news.html">
               <h1>Webscraping Inshorts News</h1>
             </a>
           </center>
@@ -30,40 +29,38 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <!-- <div class="row row-cols-1 row-cols-md-2"> -->
+        {%for x in range(0, len)%}
 
-          {%for x in range(0, len)%}
+            <div class="col mb-4">
+              <div class="card">
+                <a target="_blank" href={{ia[x]}}>
+                  <img src={{ia[x]}} class="card-img-top">
+                </a>
 
-              <div class="col mb-4">
                 <div class="card">
-                  <a href={{ia[x]}}>
-                    <!-- <img src="../static/news/_0.jpg" class="card-img-top" alt="0"> -->
-                    <img src={{ia[x]}} class="card-img-top">
-                  </a>
-                  <div class="card">
-                    <center>
-                      <h1 style="color:red;" class="card-title">{{x+1}}). {{ha[x]}}</h1>
-                      <br>
-                        <h3>
-                          <p class="card-text">{{ba[x]}}</p>
-                        </h3>
-                      <br>
+                  <center>
+                    <h1 style="color:red;" class="card-title">{{x+1}}). {{ha[x]}}</h1>
+                    <br>
+                      <h3>
+                        <p class="card-text">{{ba[x]}}</p>
+                      </h3>
+                    <br>
 
-                      {% if la[x] == 'link not found' %}
-                          <a href="{{la[x]}}" class="btn btn-primary">Link NOT Found</a>
-                      {% else %}
-                          <a href="{{la[x]}}" class="btn btn-primary">Read More</a>
-                      {% endif %}
+                    {% if la[x] == 'link not found' %}
+                        <a target="_blank" href="{{la[x]}}" class="btn btn-danger">Link NOT Found</a>
+                    {% else %}
+                        <a target="_blank" href="{{la[x]}}" class="btn btn-primary">Read More</a>
+                    {% endif %}
 
-                    </center>
-                  </div>
+                  </center>
                 </div>
               </div>
+            </div>
 
-          {% endfor %}
+        <br> <br>
+        {% endfor %}
 
-        </div>
-      <!-- </div> -->
+      </div>
     </div>
 
   </body>

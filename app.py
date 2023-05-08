@@ -1,9 +1,7 @@
 
-# from selenium import webdriver
-from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup as bs
-# import urllib.request
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -30,28 +28,22 @@ def skills():
 @app.route('/news')
 def news():
 
-    link = 'https://inshorts.com/en/read'
-    # browser = webdriver.PhantomJS()
-    # browser.get(link)
-    # req = browser.page_source
-    req = requests.get(link)
-
-    soup = bs(req.content, 'html5lib')
-    # soup = bs(req.content, "html.parser")
-    box = soup.findAll('div', attrs = {'class':'news-card z-depth-1'})
+    bot_token = '**************************'
+    # https://newsapi.org/account
+    
+    gets = f'https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey={bot_token}'
+    req = requests.get(gets) 
+    box = req.json()['articles']
 
     ha,ia,ba,la = [],[],[],[]
     for i in range(len(box)):
-        h = box[i].find('span', attrs = {'itemprop':'headline'}).text
-
-        m = box[i].find('div', attrs = {'class':'news-card-image'})
-        m = m['style'].split("'")[1]
-        # urllib.request.urlretrieve(img, f"static/news/_{i}.jpg")
-
-        b = box[i].find('div', attrs = {'itemprop':'articleBody'}).text
+        h = box[i]['title']
+        m = box[i]['urlToImage']
+        b = box[i]['description']
         l='link not found'
+
         try:
-            l = box[i].find('a', attrs = {'class':'source'})['href']
+            l = box[i]['url']
         except:
             pass
 
@@ -64,7 +56,6 @@ def news():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 
 if __name__ == '__main__':
     app.run(debug=True)
