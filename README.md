@@ -1,14 +1,7 @@
-# [News Website](https://github.com/imvickykumar999/vicks-news/blob/main/templates/news.html)
+# `News API` : [`theverge`](https://imvickykumar999.pythonanywhere.com/news)
 
->------------
->
->### [Console Upload](https://www.pythonanywhere.com/user/imvickykumar999/consoles/bash//home/imvickykumar999/mysite/new) : `unzip /home/imvickykumar999/mysite/app.zip`
->
->---------------
+[![image](https://user-images.githubusercontent.com/50515418/236736320-aa9d544e-6431-4406-b151-dcada23932a4.png)](https://imvickykumar999.pythonanywhere.com/news)
 
-## Run `heroku logs -t -a vicksnews` in CMD to check errors in [deployed site](https://imvickykumar999.pythonanywhere.com/).
+## `Say Hi`, *to* [`Telegram-Bot`](https://t.me/VixReelsbot) **for daily news**.
 
-[![app.py](https://github.com/imvickykumar999/vicks-news/blob/main/news.png?raw=true)](https://github.com/imvickykumar999/vicks-news/blob/680a0bd814eb3af809dffbb8957a4b4681217ffb/app.py#L29)
-
-## Download my WebApp's APK for Android
-[![download webapp](https://raw.githubusercontent.com/imvickykumar999/Portfolio-using-Flask/main/chart.png)](https://appsgeyser.com/api/track/redirect?url=https://files.appsgeyser.com/Oye%20Vix_12473422.apk?src=page)
+[![image](https://user-images.githubusercontent.com/50515418/236737482-b6bf7078-fcbb-425f-8e95-8ca43d9ee849.png)](https://t.me/VixReelsbot)
