@@ -4,7 +4,7 @@ import requests
 
 bot_token = input('Enter Bot Token : ')
 # bot_token = '************************'
-# https://newsapi.org/account
+# https://t.me/BotFather
 
 gets = f'https://api.telegram.org/bot{bot_token}/getUpdates'
 req = requests.get(gets) 

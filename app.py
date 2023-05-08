@@ -1,6 +1,5 @@
 
 import requests
-from bs4 import BeautifulSoup as bs
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -28,7 +27,7 @@ def skills():
 @app.route('/news')
 def news():
 
-    bot_token = '**************************'
+    bot_token = '*********************'
     # https://newsapi.org/account
     
     gets = f'https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey={bot_token}'
