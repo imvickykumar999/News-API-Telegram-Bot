@@ -1,4 +1,4 @@
-># `News API` : [`theverge`](https://imvickykumar999.pythonanywhere.com)
+># `News API` : [`theverge`](https://t.me/automate_vixbot/news)
 >
 >[![image](https://user-images.githubusercontent.com/50515418/237002755-a554bebd-085d-40ed-b64e-162fe096e2ee.png)](https://imvickykumar999.pythonanywhere.com)
 >
@@ -6,7 +6,7 @@
 <br>
 
 # `Say Hi,` ...
-## *to* [`Telegram-Bot`](https://t.me/automate_vixbot) *for daily news*.
+## *to* [`Telegram-Bot`](https://t.me/automate_vixbot) *for daily* [*`news`*](https://t.me/automate_vixbot/news).
 
 <table>
 <tr>
