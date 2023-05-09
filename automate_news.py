@@ -25,8 +25,7 @@ def send_news():
   bot_token = '*********************'
   # https://newsapi.org/account
 
-  source = ['the-hindu', 'the-times-of-india', 'bbc-news', 
-            'cnn', 'google-news', 'hacker-news', 'national-geographic', 
+  source = ['the-hindu', 'the-times-of-india', 'bbc-news', 'cnn', 
             'the-verge', 'time', 'the-wall-street-journal', ]
   
   source = random.choice(source)
