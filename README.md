@@ -8,12 +8,7 @@
 # `Say Hi,` ...
 ## *to* [`Telegram-Bot`](https://t.me/automate_vixbot) *for daily* [*`news`*](https://t.me/automate_vixbot/news).
 
-<table>
-<tr>
-<td><img src="https://user-images.githubusercontent.com/50515418/237003673-5d0c7330-d49f-416d-bcaa-75f2f51c50bb.jpg" height="1100" alt="3"></td>
-<td><img src="https://user-images.githubusercontent.com/50515418/237003697-a458e7e4-8089-478e-9636-e441662363d5.jpg" height="1100" alt="4"></td>
-</tr>
-</table>
+[![image](https://user-images.githubusercontent.com/50515418/236737482-b6bf7078-fcbb-425f-8e95-8ca43d9ee849.png)](https://t.me/VixReelsbot)
 
 -------------
 
