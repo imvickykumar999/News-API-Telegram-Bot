@@ -1,5 +1,5 @@
 
-import requests
+import requests, random
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -26,13 +26,34 @@ def skills():
 
 @app.route('/news')
 def news():
-
-    bot_token = '*********************'
     # https://newsapi.org/account
+    source = ['the-hindu', 'the-times-of-india', 'bbc-news', 'cnn', 
+              'the-verge', 'time', 'the-wall-street-journal', ]
     
-    gets = f'https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey={bot_token}'
-    req = requests.get(gets) 
-    box = req.json()['articles']
+    source = random.choice(source)
+    print(source)
+
+    try:
+        bot_token = '****************************'
+        gets = f'https://newsapi.org/v1/articles?source={source}&sortBy=top&apiKey={bot_token}'
+        
+        req = requests.get(gets) 
+        box = req.json()['articles']
+
+    except:
+        try:
+            bot_token = '******************************'
+            gets = f'https://newsapi.org/v1/articles?source={source}&sortBy=top&apiKey={bot_token}'
+            
+            req = requests.get(gets) 
+            box = req.json()['articles']
+
+        except:
+            bot_token = '*****************************'
+            gets = f'https://newsapi.org/v1/articles?source={source}&sortBy=top&apiKey={bot_token}'
+            
+            req = requests.get(gets) 
+            box = req.json()['articles']
 
     ha,ia,ba,la = [],[],[],[]
     for i in range(len(box)):

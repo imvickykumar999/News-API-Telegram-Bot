@@ -1,9 +1,16 @@
 
 # https://www.pythonanywhere.com/user/imvickykumar999/tasks_tab/
+# https://api.telegram.org/bot6057376731:AAEARe5XwGAt_-h8p7nBd4FunjU1o2WXaz0/getUpdates
+
+# https://newsapi.org/v2/top-headlines/sources?apiKey=e1b57251b1b94ed894f3c60d25551eb2
+# https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=5f69434d32434ea8bdb16b347f71cca2
+
 import requests, random
 
 def send_link(bot_message):
-  bot_token = '************************'
+  # bot_token = '*********:**********************************' # Production API
+
+  bot_token = '**********:**********************************' # Test API
   # https://t.me/BotFather
 
   gets = f'https://api.telegram.org/bot{bot_token}/getUpdates'
@@ -21,8 +28,7 @@ def send_link(bot_message):
     sets = f'https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={i}&parse_mode=Markdown&text={bot_message}'    
     requests.post(sets)
 
-def send_news():
-  bot_token = '*********************'
+def send_news(bot_token):
   # https://newsapi.org/account
 
   source = ['the-hindu', 'the-times-of-india', 'bbc-news', 'cnn', 
@@ -61,15 +67,15 @@ Reply me with any sticker to continue daily.
 
 try:
   print('1st')
-  send_news()
+  send_news('*******************************')
 except:
   try:
     print('2nd')
-    send_news()
+    send_news('******************************')
   except:
     try:
       print('3rd')
-      send_news()
+      send_news('*******************************')
     except:
       print('4th')
-      send_news()
+      send_news('********************************')
