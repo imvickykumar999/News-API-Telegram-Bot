@@ -2,7 +2,9 @@
 >
 >[![image](https://user-images.githubusercontent.com/50515418/237002755-a554bebd-085d-40ed-b64e-162fe096e2ee.png)](https://imvickykumar999.pythonanywhere.com)
 >
->![image](https://github.com/imvickykumar999/News-API-Telegram-Bot/assets/50515418/8e123f84-80ec-4830-b136-2a7a6de6a124)
+># `Dark Web Navigation Bar`
+>
+>![image](https://github.com/imvickykumar999/News-API-Telegram-Bot/assets/50515418/759ee5fb-f3f0-40f3-882d-40ed7543d8c6)
 >
 
 <br>
