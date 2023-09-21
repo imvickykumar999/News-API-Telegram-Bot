@@ -1,4 +1,4 @@
-># `News API` : [`theverge`](https://imvickykumar999.pythonanywhere.com/news/the-verge)
+># `News API` : [`GitHub Pages`](https://imvickykumar999.github.io/News-API-Telegram-Bot/)
 >
 >[![image](https://user-images.githubusercontent.com/50515418/237002755-a554bebd-085d-40ed-b64e-162fe096e2ee.png)](https://imvickykumar999.pythonanywhere.com)
 >
