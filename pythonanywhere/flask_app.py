@@ -1,20 +1,8 @@
 
-r''' 
-C:\Users\Vicky\Desktop\Repository\Host-Onion\Tor Browser\Browser\TorBrowser\Data\Tor\torrc
-
-Open Tor Browser to host on Dark Web.
-https://github.com/imvickykumar999/XAMPP-Onion-Host#for-flask-deployment
-
-HiddenServiceDir C:/Users/Vicky/Desktop/Repository/Host-Onion/Tor Browser/HiddenService/sample_flask
-HiddenServicePort 80 127.0.0.1:9151
-'''
-
 import requests, random
 from flask import Flask, render_template
 from bs4 import BeautifulSoup as bs
 
-from HostTor import VicksTor
-import VicksTor
 app = Flask(__name__)
 
 def get_news(source):
@@ -100,8 +88,7 @@ def one_news(source):
 
 @app.route('/')
 def news():
-    source = ['the-hindu', 'the-times-of-india', 'bbc-news', 'cnn', 
-              'the-verge', 'time', 'the-wall-street-journal', ]
+    source = ['bbc-news', 'cnn', 'the-verge', 'time', 'the-wall-street-journal']
     
     # https://newsapi.org/account
     source = random.choice(source)
