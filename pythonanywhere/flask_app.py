@@ -86,6 +86,10 @@ def one_news(source):
                             la=la, 
                             len = len(ha))
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 @app.route('/')
 def news():
     source = ['bbc-news', 'cnn', 'the-verge', 'time', 'the-wall-street-journal']
