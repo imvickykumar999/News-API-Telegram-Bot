@@ -1,4 +1,6 @@
 
+# make news text on image.
+
 import requests, random, os, json
 from instagrapi import Client
 from PIL import ImageDraw
@@ -9,7 +11,7 @@ try: os.mkdir('images')
 except: pass
 
 news_api = input('\nEnter NewsAPI Key : ')
-passwd = input('\nEnter Instagram Password : ')
+# passwd = input('\nEnter Instagram Password : ')
 
 source = ['bbc-news', 'cnn', 'the-verge', 'time', 'the-wall-street-journal']
 source = random.choice(source)
@@ -47,30 +49,30 @@ for j, i in enumerate(box):
     open(path, 'wb').write(r.content)
     make_square(path, j)
 
-bot = Client()
-user = 'vixbot2023'
+# bot = Client()
+# user = 'vixbot2023'
 
-bot.login(username = user, password = passwd)
-album_path = ['images/'+i for i in os.listdir('images')]
+# bot.login(username = user, password = passwd)
+# album_path = ['images/'+i for i in os.listdir('images')]
 
-text = f'Read More:\n https://googleadsense.pythonanywhere.com/news/{source}\n\n'
-post_url = bot.album_upload(
-    album_path,
-    caption = text + '\n'.join(cap)
-)
+# text = f'Read More:\n https://googleadsense.pythonanywhere.com/news/{source}\n\n'
+# post_url = bot.album_upload(
+#     album_path,
+#     caption = text + '\n'.join(cap)
+# )
 
-media_id = json.loads(post_url.json())['id']
-print(media_id)
+# media_id = json.loads(post_url.json())['id']
+# print(media_id)
 
-comment = bot.media_comment(
-    media_id, 
-    f"MediaID = (PostID_UserID) : {media_id}"
-)
-bot.comment_like(comment.pk)
+# comment = bot.media_comment(
+#     media_id, 
+#     f"MediaID = (PostID_UserID) : {media_id}"
+# )
+# bot.comment_like(comment.pk)
 
-reply = bot.media_comment(
-    media_id, 
-    f"Comment ID : {comment.pk}", 
-    replied_to_comment_id=comment.pk
-)
-bot.comment_like(reply.pk)
+# reply = bot.media_comment(
+#     media_id, 
+#     f"Comment ID : {comment.pk}", 
+#     replied_to_comment_id=comment.pk
+# )
+# bot.comment_like(reply.pk)
