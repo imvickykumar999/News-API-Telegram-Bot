@@ -1,17 +1,20 @@
 
-# make news text on image.
-
 import requests, random, os, json
 from instagrapi import Client
 from PIL import ImageDraw
 from PIL import ImageFont
 from PIL import Image
 
-try: os.mkdir('images')
-except: pass
+try: 
+    os.mkdir('images')
+except: 
+    pass
 
 news_api = input('\nEnter NewsAPI Key : ')
-# passwd = input('\nEnter Instagram Password : ')
+# user = 'vixbot2023'
+
+user = input('\nEnter Instagram Username : ')
+passwd = input('\nEnter Instagram Password : ')
 
 source = ['bbc-news', 'cnn', 'the-verge', 'time', 'the-wall-street-journal']
 source = random.choice(source)
@@ -45,39 +48,35 @@ for j, i in enumerate(box):
     new_im = new_im.convert("RGB")
     new_im.paste(img, (int((size - x) / 2), int((size - y) / 2)))
 
-    draw = ImageDraw.Draw(new_im)
+    I1 = ImageDraw.Draw(new_im)
     myFont = ImageFont.truetype("arial.ttf", 25)
 
-    w = draw.textlength(i["title"].encode('cp1252'))
-    draw.text(((size-w)/2, 900), f'{i["title"]}', font=myFont, fill=(0, 0, 0))
-    
-    draw.text((15, 15), f'[ {j+1} ]', font=myFont, fill=(0, 0, 0))
+    I1.text((15, 15), f'[ {j+1} ]', font=myFont, fill=(0, 0, 0))
+    I1.text((25, 1100), f'{i["title"]}', font=myFont, fill=(0, 0, 0))
     new_im.save(path)
 
-# bot = Client()
-# user = 'vixbot2023'
+bot = Client()
+bot.login(username = user, password = passwd)
+album_path = ['images/'+i for i in os.listdir('images')]
 
-# bot.login(username = user, password = passwd)
-# album_path = ['images/'+i for i in os.listdir('images')]
+text = f'Read More:\n https://googleadsense.pythonanywhere.com/news/{source}\n\n'
+post_url = bot.album_upload(
+    album_path,
+    caption = text + '\n'.join(cap)
+)
 
-# text = f'Read More:\n https://googleadsense.pythonanywhere.com/news/{source}\n\n'
-# post_url = bot.album_upload(
-#     album_path,
-#     caption = text + '\n'.join(cap)
-# )
+media_id = json.loads(post_url.json())['id']
+print(media_id)
 
-# media_id = json.loads(post_url.json())['id']
-# print(media_id)
+comment = bot.media_comment(
+    media_id, 
+    f"MediaID = (PostID_UserID) : {media_id}"
+)
+bot.comment_like(comment.pk)
 
-# comment = bot.media_comment(
-#     media_id, 
-#     f"MediaID = (PostID_UserID) : {media_id}"
-# )
-# bot.comment_like(comment.pk)
-
-# reply = bot.media_comment(
-#     media_id, 
-#     f"Comment ID : {comment.pk}", 
-#     replied_to_comment_id=comment.pk
-# )
-# bot.comment_like(reply.pk)
+reply = bot.media_comment(
+    media_id, 
+    f"Comment ID : {comment.pk}", 
+    replied_to_comment_id=comment.pk
+)
+bot.comment_like(reply.pk)
