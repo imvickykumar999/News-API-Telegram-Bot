@@ -23,9 +23,21 @@ req = requests.get(gets)
 box = req.json()['articles']
 cap = []
 
-def make_square(im, j, min_size=256, fill_color=(255,255,255,0)):
-    img = Image.open(im)
+for j, i in enumerate(box):
+    tweet = f'({j+1}). {i["title"]}\n'
+    cap.append(tweet)
+
+    img = i['urlToImage']
+    r = requests.get(img, allow_redirects=True)
+
+    path = f'images/{j}.jpg'
+    open(path, 'wb').write(r.content)
+
+    img = Image.open(path)
     x, y = img.size
+
+    min_size = 256
+    fill_color = (255,255,255,0)
 
     size = max(min_size, x, y)
     new_im = Image.new('RGB', (size, size), fill_color)
@@ -33,21 +45,14 @@ def make_square(im, j, min_size=256, fill_color=(255,255,255,0)):
     new_im = new_im.convert("RGB")
     new_im.paste(img, (int((size - x) / 2), int((size - y) / 2)))
 
-    I1 = ImageDraw.Draw(new_im)
-    myFont = ImageFont.truetype("arial.ttf", 30)
+    draw = ImageDraw.Draw(new_im)
+    myFont = ImageFont.truetype("arial.ttf", 25)
 
-    I1.text((15, 15), f'[ {j+1} ]', font=myFont, fill=(0, 0, 0))
-    new_im.save(im)
-
-for j, i in enumerate(box):
-    tweet = f'({j+1}). {i["title"]}\n'
-    cap.append(tweet)
-    img = i['urlToImage']
-    r = requests.get(img, allow_redirects=True)
-
-    path = f'images/{j}.jpg'
-    open(path, 'wb').write(r.content)
-    make_square(path, j)
+    w = draw.textlength(i["title"].encode('cp1252'))
+    draw.text(((size-w)/2, 900), f'{i["title"]}', font=myFont, fill=(0, 0, 0))
+    
+    draw.text((15, 15), f'[ {j+1} ]', font=myFont, fill=(0, 0, 0))
+    new_im.save(path)
 
 # bot = Client()
 # user = 'vixbot2023'
