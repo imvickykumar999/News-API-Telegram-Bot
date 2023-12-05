@@ -1,4 +1,8 @@
-># `Google AdSense` [***(News Website)***](https://googleadsense.pythonanywhere.com/)
+># `Predicting News Category` [***(News Website)***](https://imvickykumar999.pythonanywhere.com/)
+>
+>![image](https://github.com/imvickykumar999/News-API-Telegram-Bot/assets/50515418/4e03f011-cfdb-4d61-ab1c-6d5a1e696a5b)
+>
+>      https://mastodon.social/@imvickykumar999
 >
 >![image](https://github.com/imvickykumar999/Google-AdSense/assets/50515418/d14d50dc-16c5-4b82-993c-25783b7d2e4a)
 >
