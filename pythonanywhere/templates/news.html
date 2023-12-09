@@ -24,7 +24,11 @@
                   </a>
 
                   <div class="card">
-                    <h1 style="color:red;" class="card-title">{{x+1}}). {{ha[x]}}</h1>
+                    <h1 style="color:black;" class="card-title">
+                      <strong>
+                        {{x+1}}). {{ha[x]}}
+                      </strong>
+                    </h1>
                     <br>
                       <h3>
                         <p class="card-text">{{ba[x]}}</p>
@@ -34,7 +38,7 @@
                     {% if la[x] == 'link not found' %}
                         <a target="_blank" href="{{la[x]}}" class="btn btn-danger">Link NOT Found</a>
                     {% else %}
-                        <a target="_blank" href="{{la[x]}}" class="btn btn-primary">READ MORE</a>
+                        <a target="_blank" href="{{la[x]}}" class="btn btn-secondary">READ MORE</a>
                     {% endif %}
 
                   </div>
